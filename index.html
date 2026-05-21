@@ -176,7 +176,7 @@ p:last-child { margin-bottom: 0; }
       rgba(44, 31, 18, 0.62) 70%,
       rgba(44, 31, 18, 0.85) 100%
     ),
-    url('https://www.orchardcountry.com/cdn/shop/files/566895E6-0B3F-4C54-8C15-ACB438CAEC45_300x300.jpg?v=1681788374')
+    url('https://cdn.shopify.com/s/files/1/0365/1652/8187/files/web_banner_ce2f6543-3276-4808-883c-e383e78b0e71.jpg?v=1757976370')
     center center / cover no-repeat;
 }
 
@@ -397,6 +397,30 @@ p:last-child { margin-bottom: 0; }
 }
 
 /* =========================================
+   PHOTO GRID (scene gallery)
+   ========================================= */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 260px 260px;
+  gap: 4px;
+}
+.photo-grid-item {
+  overflow: hidden;
+  position: relative;
+}
+.photo-grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  display: block;
+}
+.photo-grid-item:hover img { transform: scale(1.05); }
+.photo-grid-item.span-2 { grid-column: span 2; }
+.photo-grid-item.row-2  { grid-row: span 2; }
+
+/* =========================================
    PHOTO BAND (full-bleed)
    ========================================= */
 .photo-band {
@@ -405,7 +429,7 @@ p:last-child { margin-bottom: 0; }
   overflow: hidden;
   background:
     linear-gradient(to right, rgba(44,31,18,0.55) 0%, rgba(44,31,18,0.1) 50%, rgba(44,31,18,0.55) 100%),
-    url('https://www.orchardcountry.com/cdn/shop/files/IMG_7569_300x300.jpg?v=1682521127')
+    url('https://cdn.shopify.com/s/files/1/0365/1652/8187/files/IMG_7569_480x480_6b5bd0df-efdd-4599-879c-763307671b25.jpg?v=1710976527')
     center center / cover no-repeat;
 }
 .photo-band-content {
@@ -792,6 +816,11 @@ footer ul li { margin-bottom: 0.5rem; }
   .xp-card-body-featured { padding: 2rem; }
   .proof-grid { grid-template-columns: 1fr 1fr; }
   .visit-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+  .photo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 200px 200px 200px 200px;
+  }
+  .photo-grid-item.span-2 { grid-column: span 2; }
 }
 @media (max-width: 640px) {
   html { font-size: 16px; }
@@ -805,6 +834,10 @@ footer ul li { margin-bottom: 0.5rem; }
   .footer-bottom { flex-direction: column; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
   .cta-actions { flex-direction: column; align-items: center; }
+  .photo-grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 160px 160px 160px 160px;
+  }
 }
 </style>
 </head>
@@ -889,8 +922,8 @@ footer ul li { margin-bottom: 0.5rem; }
       <div class="xp-card featured">
         <div class="xp-card-img">
           <img
-            src="https://www.orchardcountry.com/cdn/shop/files/566895E6-0B3F-4C54-8C15-ACB438CAEC45_300x300.jpg?v=1681788374"
-            alt="Lautenbach's Orchard Country winery in the restored Door County dairy barn"
+            src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/IMG_1752_3_b0000711-e6f8-4a86-8d65-a6e26288331a_480x480.jpg?v=1710975967"
+            alt="Lautenbach's Orchard Country tasting bar in the restored dairy barn winery"
             width="500"
             height="400"
             style="width:100%;height:100%;object-fit:cover;"
@@ -951,6 +984,74 @@ footer ul li { margin-bottom: 0.5rem; }
   </div>
 </section>
 
+<!-- SCENE GALLERY -->
+<div class="photo-grid" aria-label="Scenes from Lautenbach's Orchard Country">
+
+  <!-- Row 1, col 1: orchard/heritage scene -->
+  <div class="photo-grid-item">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/IMG_0110_480x480.jpg?v=1650687126"
+      alt="Lautenbach's Orchard Country estate orchard and grounds, Fish Creek"
+    >
+  </div>
+
+  <!-- Row 1, col 2: orchard 2005 heritage -->
+  <div class="photo-grid-item">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/oc_2005_068_2_240x240.jpg?v=1620012922"
+      alt="Lautenbach's orchard in Door County, historical scene circa 2005"
+    >
+  </div>
+
+  <!-- Row 1, col 3: orchard scene -->
+  <div class="photo-grid-item">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/IMG_9439_240x240.jpg?v=1620014059"
+      alt="Lautenbach's cherry orchard rows, Door County peninsula"
+    >
+  </div>
+
+  <!-- Row 1, col 4: family story -->
+  <div class="photo-grid-item">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/IMG_3767_480x480.jpg?v=1650687709"
+      alt="Lautenbach family at Orchard Country, Fish Creek Wisconsin"
+    >
+  </div>
+
+  <!-- Row 2, col 1-2 (wide): bakery scene -->
+  <div class="photo-grid-item span-2">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/bakery.jpg?v=1710994071"
+      alt="Lautenbach's Orchard Country on-site bakery, Door County cherry pies and baked goods"
+    >
+  </div>
+
+  <!-- Row 2, col 3: market interior -->
+  <div class="photo-grid-item">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/IMG_8005.jpg?v=1710994058"
+      alt="Lautenbach's farm market interior with Door County products"
+    >
+  </div>
+
+  <!-- Row 2, col 4: cherry products -->
+  <div class="photo-grid-item">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/cherry_products_1.jpg?v=1710994078"
+      alt="Lautenbach's Door County cherry preserves and products"
+    >
+  </div>
+
+</div>
+
 <!-- PHOTO BAND -->
 <div class="photo-band" role="img" aria-label="Lautenbach's Orchard Country market and grounds">
   <div class="photo-band-content">
@@ -971,6 +1072,16 @@ footer ul li { margin-bottom: 0.5rem; }
         <h2 class="reveal reveal-delay-1">Seventy years on the same Highway 42 address.</h2>
         <p class="reveal reveal-delay-2" style="font-size:1.05rem; margin-bottom:0.5rem;">Bill and Ruth Lautenbach chose a 100-acre stretch of the Door County peninsula in 1955 and planted it with cherry trees. What began as a family orchard has grown into five interconnected operations, each one rooted in the same ground, the same family, and the same stretch of Highway 42.</p>
         <p class="reveal reveal-delay-2">Today Erin Lautenbach leads as General Manager and Owner, with Carrie Lautenbach-Viste heading Sales and Marketing alongside siblings Chris and Melissa. The third generation carries forward what Bill and Ruth built, and what Bob, the second generation, stewarded after them.</p>
+
+        <!-- Heritage inline: real family/founder photo -->
+        <div class="reveal reveal-delay-2" style="margin-bottom:2.2rem; overflow:hidden; line-height:0;">
+          <img
+            loading="lazy"
+            src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/Dad_pic_480x480.jpg?v=1637277816"
+            alt="The Lautenbach family, founders of Orchard Country in Fish Creek, Door County"
+            style="width:100%; height:300px; object-fit:cover; display:block;"
+          >
+        </div>
 
         <div class="heritage-milestones">
 
@@ -1026,6 +1137,16 @@ footer ul li { margin-bottom: 0.5rem; }
       </div>
 
       <div class="heritage-sidebar">
+        <!-- Heritage sidebar: real orchard photo -->
+        <div class="reveal" style="overflow:hidden; margin-bottom:1.2rem; line-height:0;">
+          <img
+            loading="lazy"
+            src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/IMG_9973_480x480.jpg?v=1650685887"
+            alt="Lautenbach's orchard, 100 acres on Door County peninsula"
+            style="width:100%; height:280px; object-fit:cover; display:block;"
+          >
+        </div>
+
         <div class="heritage-card reveal">
           <p class="eyebrow eyebrow-sage">The Estate</p>
           <h3>100 acres. Five operations. One family address.</h3>
@@ -1178,6 +1299,38 @@ footer ul li { margin-bottom: 0.5rem; }
     </div>
   </div>
 </section>
+
+<!-- PRODUCT / SCENE TRIO -->
+<div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; line-height:0;" aria-label="Winery, cidery and seasonal scenes at Lautenbach's Orchard Country">
+
+  <div style="overflow:hidden; height:320px; position:relative;">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/winer.jpg?v=1757980630"
+      alt="Lautenbach's Orchard Country winery, restored Door County dairy barn"
+      style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.5s;"
+    >
+  </div>
+
+  <div style="overflow:hidden; height:320px; position:relative;">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/HardCider3_240x240.jpg?v=1586888568"
+      alt="Lautenbach's Stone Cold hard cherry cider, pressed from Door County apples"
+      style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.5s;"
+    >
+  </div>
+
+  <div style="overflow:hidden; height:320px; position:relative;">
+    <img
+      loading="lazy"
+      src="https://cdn.shopify.com/s/files/1/0365/1652/8187/files/IMG_2452.jpg?v=1716924613"
+      alt="Seasonal events and activities at Lautenbach's Orchard Country, Door County"
+      style="width:100%; height:100%; object-fit:cover; display:block; transition:transform 0.5s;"
+    >
+  </div>
+
+</div>
 
 <!-- SHOP / CTA BAND -->
 <section class="cta-band" id="shop">
